@@ -1,14 +1,4 @@
-
-import Mathlib.Algebra.BigOperators.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Complex.Exponential
-import Mathlib.Data.Nat.Digits
-import Mathlib.Data.Nat.Log
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.ZMod.Basic
-import Mathlib.Data.ZMod.Defs
-import Mathlib.NumberTheory.Divisors
-import Mathlib.Topology.Basic
+import MiniF2F.Minif2fImport
 
 open BigOperators Real Nat Topology
 
@@ -24,15 +14,14 @@ theorem numbertheory_4x3m7y3neq2003
   (x y : ℤ) :
   4 * x^3 - 7 * y^3 ≠ 2003 := sorry
 
--- Error: Real.log
--- theorem aime_1983_p1
---   (x y z w : ℕ)
---   (ht : 1 < x ∧ 1 < y ∧ 1 < z)
---   (hw : 0 ≤ w)
---   (h0 : Real.log w / Real.log x = 24)
---   (h1 : Real.log w / Real.log y = 40)
---   (h2 : Real.log w / Real.log (x * y * z) = 12):
---   Real.log w / Real.log z = 60 := sorry
+theorem aime_1983_p1
+  (x y z w : ℕ)
+  (ht : 1 < x ∧ 1 < y ∧ 1 < z)
+  (hw : 0 ≤ w)
+  (h0 : Real.log w / Real.log x = 24)
+  (h1 : Real.log w / Real.log y = 40)
+  (h2 : Real.log w / Real.log (x * y * z) = 12):
+  Real.log w / Real.log z = 60 := sorry
 
 theorem amc12_2001_p5 :
   Finset.prod (Finset.filter (λ x => ¬ Even x) (Finset.range 10000)) (id : ℕ → ℕ) = (10000!) / ((2^5000) * 5000!) := sorry
@@ -122,12 +111,11 @@ theorem mathd_algebra_419
   (h₁ : b = 5) :
   -a - b^2 + 3 * (a * b) = -39 := sorry
 
--- Error: Real.log
--- theorem amc12a_2020_p10
---   (n : ℕ)
---   (h₀ : 0 < n)
---   (h₁ : Real.logb 2 (Real.logb 16 n) = Real.logb 4 (Real.logb 4 n)) :
---   (Nat.digits 10 n).sum = 13 := sorry
+theorem amc12a_2020_p10
+  (n : ℕ)
+  (h₀ : 0 < n)
+  (h₁ : Real.logb 2 (Real.logb 16 n) = Real.logb 4 (Real.logb 4 n)) :
+  (Nat.digits 10 n).sum = 13 := sorry
 
 theorem imo_1960_p2
   (x : ℝ)
@@ -381,9 +369,8 @@ theorem mathd_numbertheory_552
   (h₃ : Fintype (Set.range h)) :
   ∑ k in (Set.range h).toFinset, k = 12 := sorry
 
--- Error: Real.log
--- theorem amc12b_2021_p9 :
---   (Real.log 80 / Real.log 2) / (Real.log 2 / Real.log 40) - (Real.log 160 / Real.log 2) / (Real.log 2 / Real.log 20) = 2 := sorry
+theorem amc12b_2021_p9 :
+  (Real.log 80 / Real.log 2) / (Real.log 2 / Real.log 40) - (Real.log 160 / Real.log 2) / (Real.log 2 / Real.log 20) = 2 := sorry
 
 theorem aime_1994_p3
   (x : ℤ)
@@ -562,11 +549,10 @@ theorem mathd_numbertheory_135
   (h₆ : Nat.digits 10 n = [B,A,B,C,C,A,C,B,A]) :
   100 * A + 10 * B + C = 129 := sorry
 
--- Error: Real^Real
--- theorem mathd_algebra_275
---   (x : ℝ)
---   (h : ((11:ℝ)^(1 / 4))^(3 * x - 3) = 1 / 5) :
---   ((11:ℝ)^(1 / 4))^(6 * x + 2) = 121 / 25 := sorry
+theorem mathd_algebra_275
+  (x : ℝ)
+  (h : ((11:ℝ)^(1 / 4))^(3 * x - 3) = 1 / 5) :
+  ((11:ℝ)^(1 / 4))^(6 * x + 2) = 121 / 25 := sorry
 
 theorem mathd_algebra_388
   (x y z : ℝ)
@@ -636,14 +622,13 @@ theorem mathd_algebra_432
   (x : ℝ) :
   (x + 3) * (2 * x - 6) = 2 * x^2 - 18 := sorry
 
--- Error: Real^Real
--- theorem mathd_algebra_598
---   (a b c d : ℝ)
---   (h₁ : ((4:ℝ)^a) = 5)
---   (h₂ : ((5:ℝ)^b) = 6)
---   (h₃ : ((6:ℝ)^c) = 7)
---   (h₄ : ((7:ℝ)^d) = 8) :
---   a * b * c * d = 3 / 2 := sorry
+theorem mathd_algebra_598
+  (a b c d : ℝ)
+  (h₁ : ((4:ℝ)^a) = 5)
+  (h₂ : ((5:ℝ)^b) = 6)
+  (h₃ : ((6:ℝ)^c) = 7)
+  (h₄ : ((7:ℝ)^d) = 8) :
+  a * b * c * d = 3 / 2 := sorry
 
 theorem algebra_bleqa_apbon2msqrtableqambsqon8b
   (a b : ℝ)
@@ -656,9 +641,8 @@ theorem mathd_algebra_276
   (h₀ : ∀ x : ℝ, 10 * x^2 - x - 24 = (a * x - 8) * (b * x + 3)) :
   a * b + b = 12 := sorry
 
--- Error: Real.log
--- theorem amc12a_2021_p14 :
---   (∑ k in (Finset.Icc 1 20), (Real.logb (5^k) (3^(k^2)))) * (∑ k in (Finset.Icc 1 100), (Real.logb (9^k) (25^k))) = 21000 := sorry
+theorem amc12a_2021_p14 :
+  (∑ k in (Finset.Icc 1 20), (Real.logb (5^k) (3^(k^2)))) * (∑ k in (Finset.Icc 1 100), (Real.logb (9^k) (25^k))) = 21000 := sorry
 
 theorem algebra_sum1onsqrt2to1onsqrt10000lt198 :
   ∑ k in (Finset.Icc (2 : ℕ) 10000), (1 / Real.sqrt k) < 198 := sorry
@@ -688,9 +672,8 @@ theorem mathd_numbertheory_435
   (h₃ : ∀ n, Nat.gcd (6 * n + k) (6 * n + 1) = 1) :
   5 ≤ k := sorry
 
--- Error: irrational
--- theorem algebra_others_exirrpowirrrat :
---   ∃ a b, irrational a ∧ irrational b ∧ ¬ irrational (a^b) := sorry
+theorem algebra_others_exirrpowirrrat :
+  ∃ a b, Irrational a ∧ Irrational b ∧ ¬ Irrational (a^b) := sorry
 
 theorem mathd_algebra_427
   (x y z : ℝ)
@@ -790,13 +773,12 @@ theorem aime_1984_p1
   (h₁ : ∑ k in Finset.range 98, u k.succ = 137) :
   ∑ k in Finset.range 49, u (2 * k.succ) = 93 := sorry
 
--- Error: Real.pi
--- theorem amc12a_2021_p22
---   (a b c : ℝ)
---   (f : ℝ → ℝ)
---   (h₀ : ∀ x, f x = x^3 + a * x^2 + b * x + c)
---   (h₁ : f⁻¹' {0} = {Real.cos (2 * Real.pi / 7), Real.cos (4 * Real.pi / 7), Real.cos (6 * Real.pi / 7)}) :
---   a * b * c = 1 / 32 := sorry
+theorem amc12a_2021_p22
+  (a b c : ℝ)
+  (f : ℝ → ℝ)
+  (h₀ : ∀ x, f x = x^3 + a * x^2 + b * x + c)
+  (h₁ : f⁻¹' {0} = {Real.cos (2 * Real.pi / 7), Real.cos (4 * Real.pi / 7), Real.cos (6 * Real.pi / 7)}) :
+  a * b * c = 1 / 32 := sorry
 
 theorem mathd_numbertheory_229 :
   (5^30) % 7 = 1 := sorry
@@ -842,9 +824,8 @@ theorem amc12b_2021_p18
   (h₀ : 12 * Complex.normSq z = 2 * Complex.normSq (z + 2) + Complex.normSq (z^2 + 1) + 31) :
   z + 6 / z = -2 := sorry
 
--- Error: Real.log
--- theorem mathd_algebra_484 :
---   Real.log 27 / Real.log 3 = 3 := sorry
+theorem mathd_algebra_484 :
+  Real.log 27 / Real.log 3 = 3 := sorry
 
 theorem mathd_numbertheory_551 :
   1529 % 6 = 5 := sorry
@@ -882,23 +863,21 @@ theorem mathd_numbertheory_711
   (m n : ℕ)
   (h₀ : 0 < m ∧ 0 < n)
   (h₁ : Nat.gcd m n = 8)
-  (h₂ : lcm m n = 112) :
+  (h₂ : Nat.lcm m n = 112) :
   72 ≤ m + n := sorry
 
--- Error: Real^Real
--- theorem amc12b_2020_p22
---   (t : ℝ) :
---   ((2^t - 3 * t) * t) / (4^t) ≤ 1 / 12 := sorry
+theorem amc12b_2020_p22
+  (t : ℝ) :
+  ((2^t - 3 * t) * t) / (4^t) ≤ 1 / 12 := sorry
 
 theorem mathd_algebra_113
   (x : ℝ) :
   x^2 - 14 * x + 3 ≥ 7^2 - 14 * 7 + 3 := sorry
 
--- Error: Real.pi
--- theorem amc12a_2020_p9
---   (S : Finset ℝ)
---   (h₀ : ∀ (x : ℝ), x ∈ S ↔ 0 ≤ x ∧ x ≤ 2 * Real.pi ∧ Real.tan (2 * x) = Real.cos (x / 2)) :
---   S.card = 5 := sorry
+theorem amc12a_2020_p9
+  (S : Finset ℝ)
+  (h₀ : ∀ (x : ℝ), x ∈ S ↔ 0 ≤ x ∧ x ≤ 2 * Real.pi ∧ Real.tan (2 * x) = Real.cos (x / 2)) :
+  S.card = 5 := sorry
 
 theorem amc12_2000_p1
   (i m o : ℕ)
@@ -906,11 +885,10 @@ theorem amc12_2000_p1
   (h₁ : i*m*o = 2001) :
   i+m+o ≤ 671 := sorry
 
--- Error: Real.pi
--- theorem amc12a_2021_p19
---   (S : Finset ℝ)
---   (h₀ : ∀ (x : ℝ), x ∈ S ↔ 0 ≤ x ∧ x ≤ Real.pi ∧ Real.sin (Real.pi / 2 * Real.cos x) = Real.cos (Real.pi / 2 * Real.sin x)) :
---   S.card = 2 := sorry
+theorem amc12a_2021_p19
+  (S : Finset ℝ)
+  (h₀ : ∀ (x : ℝ), x ∈ S ↔ 0 ≤ x ∧ x ≤ Real.pi ∧ Real.sin (Real.pi / 2 * Real.cos x) = Real.cos (Real.pi / 2 * Real.sin x)) :
+  S.card = 2 := sorry
 
 theorem algebra_amgm_sumasqdivbgeqsuma
   (a b c d : ℝ)
@@ -947,13 +925,12 @@ theorem mathd_algebra_148
   (h₁ : f 2 = 9) :
   c = 3 := sorry
 
--- Error: Real.log
--- theorem amc12a_2019_p12
---   (x y : ℝ)
---   (h₀ : x ≠ 1 ∧ y ≠ 1)
---   (h₁ : Real.log x / Real.log 2 = Real.log 16 / Real.log y)
---   (h₂ : x * y = 64) :
---   (Real.log (x / y) / Real.log 2)^2 = 20 := sorry
+theorem amc12a_2019_p12
+  (x y : ℝ)
+  (h₀ : x ≠ 1 ∧ y ≠ 1)
+  (h₁ : Real.log x / Real.log 2 = Real.log 16 / Real.log y)
+  (h₂ : x * y = 64) :
+  (Real.log (x / y) / Real.log 2)^2 = 20 := sorry
 
 theorem induction_11div10tonmn1ton
   (n : ℕ) :
@@ -1184,11 +1161,10 @@ theorem algebra_apbpceq2_abpbcpcaeq1_aleq1on3anbleq1ancleq4on3
 theorem mathd_numbertheory_66 :
   194 % 11 = 7 := sorry
 
--- Error: Real.pi
--- theorem amc12b_2021_p1
---   (S : Finset ℤ)
---   (h₀ : ∀ (x : ℤ), x ∈ S ↔ ↑(abs x) < 3 * Real.pi):
---   S.card = 19 := sorry
+theorem amc12b_2021_p1
+  (S : Finset ℤ)
+  (h₀ : ∀ (x : ℤ), x ∈ S ↔ ↑(abs x) < 3 * Real.pi):
+  S.card = 19 := sorry
 
 theorem algebra_apbon2pownleqapownpbpowon2
   (a b : ℝ)
@@ -1215,15 +1191,13 @@ theorem aime_1990_p15
 theorem mathd_numbertheory_235 :
   (29 * 79 + 31 * 81) % 10 = 2 := sorry
 
--- Error: Real.log
--- theorem amc12b_2020_p13 :
---   Real.sqrt (Real.log 6 / Real.log 2 + Real.log 6 / Real.log 3) = Real.sqrt (Real.log 3 / Real.log 2) + Real.sqrt (Real.log 2 / Real.log 3) := sorry
+theorem amc12b_2020_p13 :
+  Real.sqrt (Real.log 6 / Real.log 2 + Real.log 6 / Real.log 3) = Real.sqrt (Real.log 3 / Real.log 2) + Real.sqrt (Real.log 2 / Real.log 3) := sorry
 
--- Error: Real.pi
--- theorem amc12b_2021_p13
---   (S : Finset ℝ)
---   (h₀ : ∀ (x : ℝ), x ∈ S ↔ 0 < x ∧ x ≤ 2 * Real.pi ∧ 1 - 3 * Real.sin x + 5 * Real.cos (3 * x) = 0) :
---   S.card = 6 := sorry
+theorem amc12b_2021_p13
+  (S : Finset ℝ)
+  (h₀ : ∀ (x : ℝ), x ∈ S ↔ 0 < x ∧ x ≤ 2 * Real.pi ∧ 1 - 3 * Real.sin x + 5 * Real.cos (3 * x) = 0) :
+  S.card = 6 := sorry
 
 theorem mathd_numbertheory_234
   (a b : ℕ)
@@ -1295,12 +1269,11 @@ theorem aime_1991_p9
   (h₁ : 1 / Real.sin x + 1 / Real.tan x = m) :
   ↑m.den + m.num = 44 := sorry
 
--- Error: Real^Real
--- theorem amc12a_2009_p6
---   (m n p q : ℝ)
---   (h₀ : p = 2 ^ m)
---   (h₁ : q = 3 ^ n) :
---   p^(2 * n) * (q^m) = 12^(m * n) := sorry
+theorem amc12a_2009_p6
+  (m n p q : ℝ)
+  (h₀ : p = 2 ^ m)
+  (h₁ : q = 3 ^ n) :
+  p^(2 * n) * (q^m) = 12^(m * n) := sorry
 
 theorem mathd_algebra_158
   (a : ℕ)
@@ -1363,13 +1336,12 @@ theorem mathd_algebra_139
   (h₀ : ∀ x, ∀ y, x≠0 -> y≠0 -> s x y = (1/y - 1/x) / (x-y)) :
   s 3 11 = 1/33 := sorry
 
--- Error: ℕ+^Real
--- theorem amc12a_2021_p25
---   (N : ℕ)
---   (f : ℕ → ℝ)
---   (h₀ : ∀ n, 0 < n → f n = ((Nat.divisors n).card)/(n^((1:ℝ)/3)))
---   (h₁ : ∀ n ≠ N, 0 < n → f n < f N) :
---   (Nat.digits 10 N).sum = 9 := sorry
+theorem amc12a_2021_p25
+  (N : ℕ)
+  (f : ℕ → ℝ)
+  (h₀ : ∀ n, 0 < n → f n = ((Nat.divisors n).card)/(n^((1:ℝ)/3)))
+  (h₁ : ∀ n ≠ N, 0 < n → f n < f N) :
+  (Nat.digits 10 N).sum = 9 := sorry
 
 theorem amc12a_2020_p25
   (a : ℚ)
